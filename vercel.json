@@ -8,6 +8,37 @@
   ],
   "routes": [
     {
+      "src": "/api/events",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/events/:id",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/goals",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/goals/:id",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/tasks/:goalId",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/tasks",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/tasks/:id",
+      "dest": "index.js"
+    },
+
+
+
+    {
       "src": "/api/events/(.*)",
       "dest": "index.js"
     },

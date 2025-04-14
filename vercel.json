@@ -1,0 +1,58 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/events",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/events/:id",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/goals",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/goals/:id",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/tasks/:goalId",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/tasks",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/tasks/:id",
+      "dest": "index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "server.js",
+      "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "https://skblossom.vercel.app, http://localhost:3000",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Authorization",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Max-Age": "86400"
+      }
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

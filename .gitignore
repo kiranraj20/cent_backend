@@ -1,0 +1,71 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+logs/
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Build output
+dist/
+build/
+*.out
+*.o
+
+# IDE specific files
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln
+*.sw?
+
+# Python specific
+__pycache__/
+*.py[cod]
+
+# Java specific
+*.class
+
+# Environment variables
+.env
+.env.local
+
+# Database files
+*.sqlite3
+
+# Compiled files
+*.dll
+*.exe
+*.so
+*.dylib
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Temporary files
+*.tmp
+*.bak
+
+# Custom ignore rules
+*.iml
+*.log
+*.bak
+*.swp
+*.lock
+
+# Ignore test coverage reports
+coverage/
+.nyc_output/
+
+# Ignore Yarn and package lock files
+yarn.lock
+package-lock.json

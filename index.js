@@ -1,15 +1,15 @@
 import express, { json } from "express";
 import { connect } from "mongoose";
-import cors from "cors";
 import { config } from "dotenv";
 import apiRoutes from "./routes/api.js";
+import corsMiddleware from "./middleware/cors.js";
 
 config();
 
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(corsMiddleware);
 app.use(json());
 
 // Connect to MongoDB

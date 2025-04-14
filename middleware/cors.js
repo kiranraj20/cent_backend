@@ -1,4 +1,4 @@
-const allowedOrigins = ['https://cent-frontend.vercel.app/', 'http://localhost:3000'];
+const allowedOrigins = ['https://cent-frontend.vercel.app', 'http://localhost:3000'];
 
 const corsMiddleware = function(req, res, next) {
     const origin = req.headers.origin;

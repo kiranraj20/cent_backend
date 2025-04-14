@@ -5,38 +5,34 @@
       "src": "index.js",
       "use": "@vercel/node"
     },
-    {
-      "src": "public/**",
-      "use": "@vercel/static"
-    }
   ],
   "routes": [
     {
-      "src": "/api/events",
+      "src": "/api/events/(.*)",
       "dest": "index.js"
     },
     {
-      "src": "/api/events/:id",
+      "src": "/api/events/:id/(.*)",
       "dest": "index.js"
     },
     {
-      "src": "/api/goals",
+      "src": "/api/goals/(.*)",
       "dest": "index.js"
     },
     {
-      "src": "/api/goals/:id",
+      "src": "/api/goals/:id/(.*)",
       "dest": "index.js"
     },
     {
-      "src": "/api/tasks/:goalId",
+      "src": "/api/tasks/:goalId/(.*)",
       "dest": "index.js"
     },
     {
-      "src": "/api/tasks",
+      "src": "/api/tasks/(.*)",
       "dest": "index.js"
     },
     {
-      "src": "/api/tasks/:id",
+      "src": "/api/tasks/:id/(.*)",
       "dest": "index.js"
     },
     {
